@@ -134,6 +134,8 @@ Now press (Ctrl-X) to exit
 ```
 sudo service mysql restart
 ```
+
+### Install Postgres Database if required and mariadb works for the same
 ### Install frappe-bench
 ```
 sudo -H pip3 install frappe-bench
