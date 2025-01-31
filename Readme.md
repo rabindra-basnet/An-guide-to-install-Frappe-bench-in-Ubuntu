@@ -54,9 +54,6 @@ nvm install --lts
 # Switch to the LTS version
 nvm use --lts
 
-
-
-
 # Update npm to the latest version
 npm install -g npm@latest
 
