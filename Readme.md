@@ -40,11 +40,24 @@ sudo apt install python3.10-venv
 
 ### Install Curl, Redis and Node.js
 ```
-sudo apt install curl 
+# Install NVM (if not installed)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.profile
-nvm install node
-nvm alias default node 
+
+# Install Node.js 20 and set it as the default
+nvm install 20
+nvm alias default 20
+
+# Update npm to the latest version
+npm install -g npm@latest
+
+# Verify the installed versions
+node -v
+npm -v
+
+# Clear npm cache (if needed)
+npm cache clean --force
+
 ```
 
 ###  Install Yarn
