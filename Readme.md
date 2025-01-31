@@ -136,6 +136,43 @@ sudo service mysql restart
 ```
 
 ### Install Postgres Database if required and mariadb works for the same
+```bash
+sudo apt-get install postgresql-17 postgresql-client-17 postgresql-contrib
+```
+After installation
+``` bash
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+```
+```bash
+sudo -i -u postgres
+psql
+```
+Set a Password for the postgres User
+```bash
+ALTER USER postgres PASSWORD 'any';
+```
+Exit the PostgreSQL Shell
+```bash
+\q
+```
+Check the Password
+```bash
+psql -U postgres -W
+```
+Update the Authentication Method
+```bash
+sudo nano /etc/postgresql/17/main/pg_hba.conf
+```
+Restart PostgreSQL for Changes to Take Effect
+```bash
+sudo systemctl restart postgresql
+```
+Test the Connection
+```bash
+psql -U postgres -h localhost
+```
+
 ### Install frappe-bench
 ```
 sudo -H pip3 install frappe-bench
