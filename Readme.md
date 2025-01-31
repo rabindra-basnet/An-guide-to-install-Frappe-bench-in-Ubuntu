@@ -31,6 +31,10 @@ sudo apt-get install python3-dev
 sudo apt-get install python3-setuptools python3-pip
 sudo apt-get install xvfb libfontconfig wkhtmltopdf
 sudo apt-get install libmysqlclient-dev
+
+## for postgre
+sudo apt install libpq-dev
+
 ```
 ###  Install virtualenv
 ```
