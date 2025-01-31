@@ -45,8 +45,17 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.profile
 
 # Install Node.js 20 and set it as the default
+nvm install 22
+nvm use 22
+
+# Install the latest LTS version
 nvm install --lts
+
+# Switch to the LTS version
 nvm use --lts
+
+
+
 
 # Update npm to the latest version
 npm install -g npm@latest
