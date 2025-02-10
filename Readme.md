@@ -44,29 +44,10 @@ sudo apt install python3.10-venv
 
 ### Install Curl, Redis and Node.js
 ```
-# Install NVM (if not installed)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-source ~/.profile
-
-# Install Node.js 20 and set it as the default
-nvm install 22
-nvm use 22
-
-# Install the latest LTS version
-nvm install --lts
-
-# Switch to the LTS version
-nvm use --lts
-
-# Update npm to the latest version
-npm install -g npm@latest
-
-# Verify the installed versions
-node -v
-npm -v
-
-# Clear npm cache (if needed)
-npm cache clean --force
+sudo apt update
+sudo apt install curl 
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
 
 ```
 
