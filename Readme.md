@@ -53,7 +53,6 @@ sudo apt install -y nodejs
 
 ###  Install Yarn
 ```
-sudo apt-get install npm
 sudo npm install -g yarn
 ```
 
