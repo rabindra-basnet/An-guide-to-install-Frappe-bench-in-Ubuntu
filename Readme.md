@@ -150,11 +150,22 @@ curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearm
 # Add the PostgreSQL repository
 echo "deb [signed-by=/usr/share/keyrings/postgresql-keyring.gpg] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
 
+```bash
+sudo apt update
 ```
 
 ```bash
-sudo apt-get install postgresql-17 postgresql-client-17 postgresql-contrib
+sudo apt install -y postgresql-17 postgresql-client-17 postgresql-contrib
 ```
+To remove PostgreSQL 14 and install PostgreSQL 17
+```bash
+sudo systemctl stop postgresql
+````
+```bash
+sudo apt remove --purge -y postgresql-14 postgresql-client-14 postgresql-contrib
+sudo apt autoremove -y
+sudo apt autoclean
+````
 After installation
 ``` bash
 sudo systemctl start postgresql
