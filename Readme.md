@@ -141,7 +141,15 @@ sudo service mysql restart
 ### Install Postgres Database if required and mariadb works for the same
 for installing the latest postgres in ubuntu. First it need to have a package i.e 
 ```bash
-sudo apt install postgresql
+sudo apt update
+sudo apt install -y curl ca-certificates gnupg
+
+# Import the PostgreSQL signing key
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /usr/share/keyrings/postgresql-keyring.gpg
+
+# Add the PostgreSQL repository
+echo "deb [signed-by=/usr/share/keyrings/postgresql-keyring.gpg] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+
 ```
 
 ```bash
